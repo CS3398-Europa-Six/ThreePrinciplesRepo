@@ -20,27 +20,29 @@ import java.io.*;
 // apply to this one. 
 
 // Reasoning by Trenton H.
-
 
 
 
 
-class SuperWorker implements IWorker,IFeedable
-{
-	
-	public void work() 
-	{
-		
+
+class SuperWorker extends BaseWorker implements IEat,ISick {
+
+    @Override
+	public void work() {
 		//.... working much more
-	
+        System.out.println("SuperWorker.work()");
 	}
 
 	
-	public void eat() 
-	{
-		
+	public void eat() {
 		//.... eating in lunch break
-	
+	   System.out.println("SuperWorker.eat()");
 	}
+    
+    	public void sick() {
+		//.... sick
+	   System.out.println("SuperWorker.sick()");
+	}
+
 
 }

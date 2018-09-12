@@ -9,9 +9,10 @@ import java.io.*;
 
 //import threesolid.IWorker;
 
-class Robot implements IWorker{
-	public void work() {
-		// ....working
+class Robot extends BaseWorker implements IReboot {
+	public void reboot() {
+		// ....rebooting
+        System.out.println("Robot.reboot()");
 	}
 }
 

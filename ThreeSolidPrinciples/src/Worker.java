@@ -11,12 +11,14 @@ import java.io.*;
 
 //import threesolid.IWorker;
 
-class Worker implements IWorker, IFeedable{
-	public void work() {
-		// ....working
+class Worker extends BaseWorker implements IEat, ISick {
+	public void eat() {
+    // ....eating
+		System.out.println("Worker.eat()");
 	}
 
-	public void eat() {
-		//.... eating in lunch break
+	public void sick() {
+		//.... sick
+        System.out.println("Worker.sick()");
 	}
 }
