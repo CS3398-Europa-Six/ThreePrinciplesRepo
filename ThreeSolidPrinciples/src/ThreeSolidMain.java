@@ -10,7 +10,12 @@ import java.io.*;
 public class ThreeSolidMain
 {   
 
-   public static Manager tsManager = new Manager();
+   public static ProjectManager testProjectManager = new ProjectManager();
+   public static ProductManager testProducManager = new Productmanager();
+   public static Worker testWorker = new Worker();
+   public static SuperWorker testSuperWorker = new SuperWorker();
+   public static TempWorker testTempWorker = new TempWorker();
+   public static Robot testRobot = new Robot();
 
    // The entry main() method
    public static void main(String[] args) 
@@ -18,14 +23,27 @@ public class ThreeSolidMain
  
       try 
       {
-         System.out.format("Starting ... \n");               
+         System.out.format("Starting Test ... \n");
+         testProjectManager.schedulework();
+         testProductManager.defineproduct();
+         testWorker.work();
+         testWorker.eat();
+         testWorker.sick();
+         testSuperWorker.work();
+         testSuperWorker.eat();
+         testSuperWorker.sick();
+         testTempWorker.work();
+         testTempWorker.eat();
+         testTempWorker.sick();
+         testRobot.work();
+         testRobot.reboot();
       } 
       catch (Exception main_except)
       {
          main_except.printStackTrace();
       }
 
-            try 
+      try 
       {
          System.out.format("Stopping ... \n");               
       } 
