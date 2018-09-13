@@ -20,12 +20,12 @@ class TempWorker extends BaseWorker implements IEat,ISick {
 	
 	public void eat() {
 		//.... eating in lunch break
-	   System.out.println("SuperWorker.eat()");
+	   System.out.println("TempWorker.eat()");
 	}
     
     	public void sick() {
 		//.... sick
-	   System.out.println("SuperWorker.sick()");
+	   System.out.println("TempWorker.sick()");
 	}
 
 
