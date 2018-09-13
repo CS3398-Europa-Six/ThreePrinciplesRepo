@@ -7,6 +7,6 @@ import java.io.*;
 //import threesolid.IWorker;
 
 // interface segregation principle - good example
-interface IFeedable {
+interface IEat {
 	public void eat();
 }   
