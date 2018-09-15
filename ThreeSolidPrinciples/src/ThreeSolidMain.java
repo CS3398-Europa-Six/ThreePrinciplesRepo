@@ -11,7 +11,7 @@ public class ThreeSolidMain
 {   
 
    public static ProjectManager testProjectManager = new ProjectManager();
-   public static ProductManager testProducManager = new Productmanager();
+   public static ProductManager testProductManager = new ProductManager();
    public static Worker testWorker = new Worker();
    public static SuperWorker testSuperWorker = new SuperWorker();
    public static TempWorker testTempWorker = new TempWorker();
