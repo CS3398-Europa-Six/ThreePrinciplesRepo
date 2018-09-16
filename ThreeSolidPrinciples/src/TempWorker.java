@@ -23,7 +23,7 @@ class TempWorker extends BaseWorker implements IEat,ISick {
 	   System.out.println("TempWorker.eat()");
 	}
 
-    	public void sick() {
+    public void sick() {
 		//calls out regularly
 	   System.out.println("TempWorker.sick()");
 	}

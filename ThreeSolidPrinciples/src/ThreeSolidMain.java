@@ -9,50 +9,33 @@ import java.io.*;
 
 public class ThreeSolidMain
 {   
-
-   public static ProjectManager testProjectManager = new ProjectManager();
-   public static ProductManager testProductManager = new ProductManager();
-   public static Worker testWorker = new Worker();
-   public static SuperWorker testSuperWorker = new SuperWorker();
-   public static TempWorker testTempWorker = new TempWorker();
-   public static Robot testRobot = new Robot();
-
    // The entry main() method
    public static void main(String[] args) 
    {
- 
-      try 
-      {
-         System.out.format("Starting Test ... \n");
-         testProjectManager.schedulework();
-         testProductManager.defineproduct();
-         testWorker.work();
-         testWorker.eat();
-         testWorker.sick();
-         testSuperWorker.work();
-         testSuperWorker.eat();
-         testSuperWorker.sick();
-         testTempWorker.work();
-         testTempWorker.eat();
-         testTempWorker.sick();
-         testRobot.work();
-         testRobot.reboot();
-      } 
-      catch (Exception main_except)
-      {
-         main_except.printStackTrace();
-      }
+       ProjectManager testProjectManager = new ProjectManager();
+       ProductManager testProductManager = new ProductManager();
+       Worker testWorker = new Worker();
+       SuperWorker testSuperWorker = new SuperWorker();
+       TempWorker testTempWorker = new TempWorker();
+       Robot testRobot = new Robot();
 
-      try 
-      {
-         System.out.format("Stopping ... \n");               
-      } 
-      catch (Exception main_except)
-      {
-         main_except.printStackTrace();
-      }
+       System.out.format("Starting Test ... \n");
 
-      System.exit(0);
+       testProjectManager.schedulework();
+       testProductManager.defineproduct();
+       testWorker.work();
+       testWorker.eat();
+       testWorker.sick();
+       testSuperWorker.work();
+       testSuperWorker.eat();
+       testSuperWorker.sick();
+       testTempWorker.work();
+       testTempWorker.eat();
+       testTempWorker.sick();
+       testRobot.work();
+       testRobot.reboot();
+
+       System.out.format("Stopping ... \n");               
 
    }
  }
