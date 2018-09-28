@@ -26,7 +26,7 @@ class Manager{
 	public void Manager() {
 
 	}
-	public void manage(IWorker w) {
+	public void manage(BaseWorker w) {
 		w.work();
 	}
 }

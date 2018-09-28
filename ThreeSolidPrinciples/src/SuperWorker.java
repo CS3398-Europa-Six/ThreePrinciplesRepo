@@ -39,7 +39,7 @@ class SuperWorker extends BaseWorker implements IEat,ISick {
 	   System.out.println("SuperWorker.eat()");
 	}
 
-    	public void sick() {
+    public void sick() {
 		//I pity the fool who actually gets sick
 	   System.out.println("SuperWorker.sick()");
 	}
