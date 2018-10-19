@@ -28,9 +28,9 @@ import java.io.*;
 class SuperWorker extends BaseWorker implements IEat,ISick {
 
     @Override
-	public void work() {
+	public String work() {
 		//.... working much more
-        System.out.println("SuperWorker.work()");
+        return "SuperWorker.work()";
 	}
 
 

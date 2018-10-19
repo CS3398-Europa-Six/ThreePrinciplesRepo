@@ -12,9 +12,9 @@ import java.io.*;
 class TempWorker extends BaseWorker implements IEat,ISick {
 
     @Override
-	public void work() {
+	public String work() {
 		//.... working temporarily
-        System.out.println("TempWorker.work()");
+        return "TempWorker.work()";
 	}
 
 

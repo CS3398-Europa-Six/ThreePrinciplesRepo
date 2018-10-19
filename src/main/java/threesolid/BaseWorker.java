@@ -6,8 +6,8 @@ import java.io.*;
 
 
 class BaseWorker {
-	public void work() {
+	public String work() {
     // ....work
-		System.out.println("BaseWorker.work()");
+		return "BaseWorker.work()";
 	}
 }

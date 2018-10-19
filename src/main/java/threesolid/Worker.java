@@ -21,4 +21,29 @@ class Worker extends BaseWorker implements IEat, ISick {
 		//.... sick
         System.out.println("Worker.sick()");
 	}
+
+    
+    private String name = "";
+
+     public String getName()
+     {
+       return name;
+     }
+
+     public void setName(String name)
+     {
+         this.name = name;
+     }
+
+     public String work()
+     {
+         if (name == "")
+       {
+              return "I'm working already!";
+       }
+       else
+       {
+              return name + " is working very hard!";
+       }
+    }
 }
