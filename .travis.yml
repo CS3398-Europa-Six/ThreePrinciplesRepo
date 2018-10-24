@@ -5,7 +5,7 @@ jdk:
   - oraclejdk8
 
 script:
-  - ./gradlew test --scan --stacktrace --info -s
+  - ./gradlew test --scan -s
 =======
 script: gradlew build
 >>>>>>> 88f73e434eddbff76a3e9c25968e3b3833f36b97
