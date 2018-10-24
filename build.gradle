@@ -97,6 +97,11 @@ dependencies {
     )
 }
 
+repositories {
+	mavenCentral()
+}
+
+
 test {
     useJUnitPlatform()
 }
