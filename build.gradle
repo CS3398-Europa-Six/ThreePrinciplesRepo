@@ -80,6 +80,15 @@ jar {
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath ("org.junit.platform:junit-platform-gradle-plugin:1.0.0-M4")
+    }
+}
+
 // joda-time provides the time stamping used in HelloWorld.java
 // junit is to run the TestGreeter.java and others
 dependencies {
