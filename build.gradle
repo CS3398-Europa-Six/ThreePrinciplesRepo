@@ -54,7 +54,7 @@ sourceSets {
 //      mainClassName = 'package.mainClassName'
 //
 //
-mainClassName = 'threesolid.ThreePrinciplesRepo'
+mainClassName = 'threesolid.ThreeSolidMain'
 
 // tag::repositories[]
 // Usually, a Java project will have some dependencies on external JAR files.  Gradle searches here for them
@@ -84,21 +84,17 @@ targetCompatibility = 1.7
 // junit is to run the TestGreeter.java and others
 dependencies {
     compile "joda-time:joda-time:2.2"
-    compile "org.junit.jupiter:junit-jupiter-api:4.6.0-M1"
-    testCompile 'junit:junit:4.6'
-    testCompile "org.junit.jupiter:junit-jupiter-api:4.6.0-M1"
+    compile "org.junit.jupiter:junit-jupiter-api:5.3.0-M1"
+    testCompile 'junit:junit:4.12'
+    testCompile "org.junit.jupiter:junit-jupiter-api:5.3.0-M1"
 
     testImplementation(
-            'org.junit.jupiter:junit-jupiter-api:4.6.0-M1'
+            'org.junit.jupiter:junit-jupiter-api:5.3.0-M1'
     )
     testRuntimeOnly(
-            'org.junit.jupiter:junit-jupiter-engine:4.6.0-M1',
-            'org.junit.vintage:junit-vintage-engine:4.6.0-M1'
+            'org.junit.jupiter:junit-jupiter-engine:5.3.0-M1',
+            'org.junit.vintage:junit-vintage-engine:5.3.0-M1'
     )
-}
-
-repositories {
-	mavenCentral()
 }
 
 
