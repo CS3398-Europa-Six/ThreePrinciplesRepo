@@ -20,18 +20,14 @@ repositories {
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
-    compile "joda-time:joda-time:2.2"
-    compile "org.junit.jupiter:junit-jupiter-api:4.3.0-M1"
-    testCompile 'junit:junit:4.12'
-    testCompile "org.junit.jupiter:junit-jupiter-api:4.3.0-M1"
+    // The production code uses the SLF4J logging API at compile time
+    compile 'org.slf4j:slf4j-api:1.7.12'
 
-    testImplementation(
-            'org.junit.jupiter:junit-jupiter-api:4.3.0-M1'
-    )
-    testRuntimeOnly(
-            'org.junit.jupiter:junit-jupiter-engine:4.3.0-M1',
-            'org.junit.vintage:junit-vintage-engine:4.3.0-M1'
-    )
+    // Declare the dependency for your favourite test framework you want to use in your tests.
+    // TestNG is also supported by the Gradle Test task. Just change the
+    // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
+    // 'test.useTestNG()' to your build script.
+    testCompile 'junit:junit:4.12'
 }
 */
 
@@ -58,7 +54,7 @@ sourceSets {
 //      mainClassName = 'package.mainClassName'
 //
 //
-mainClassName = 'threesolid.ThreePrinciplesRepo'
+mainClassName = 'threesolid.ThreeSolidMain'
 
 // tag::repositories[]
 // Usually, a Java project will have some dependencies on external JAR files.  Gradle searches here for them
@@ -84,8 +80,18 @@ jar {
 sourceCompatibility = 1.7
 targetCompatibility = 1.7
 
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath ("org.junit.platform:junit-platform-gradle-plugin:1.0.0-M4")
+    }
+}
+
 // joda-time provides the time stamping used in HelloWorld.java
 // junit is to run the TestGreeter.java and others
+<<<<<<< HEAD
 <<<<<<< HEAD
 dependencies {       
     testImplementation "org.junit.jupiter:junit-jupiter-params:$junitVersion"
@@ -96,12 +102,22 @@ dependencies {
 }
 =======
 >>>>>>> 667a44d38a50a6d6b03a6ac296d37678a3126c69
+=======
+dependencies {
+    compile "joda-time:joda-time:2.2"
+    compile "org.junit.jupiter:junit-jupiter-api:5.3.0-M1"
+    testRuntime("org.junit.vintage:junit-vintage-engine:4.12.0-M4")
+>>>>>>> 88f73e434eddbff76a3e9c25968e3b3833f36b97
 
-repositories {
-	mavenCentral()
+    testCompile("org.junit.jupiter:junit-jupiter-api:5.0.0-M4")
+    testRuntime("org.junit.jupiter:junit-jupiter-engine:5.0.0-M4")
+
+    // Enable use of the JUnitPlatform Runner within the IDE
+    testCompile("org.junit.platform:junit-platform-runner:1.0.0-M4")
 }
 
 
+<<<<<<< HEAD
 test {
 <<<<<<< HEAD
     useJUnitPlatform {
@@ -110,6 +126,10 @@ test {
 =======
     //useJUnitPlatform()
 >>>>>>> 667a44d38a50a6d6b03a6ac296d37678a3126c69
+=======
+junitPlatform {
+    details 'tree'
+>>>>>>> 88f73e434eddbff76a3e9c25968e3b3833f36b97
 }
 // end::dependencies[]
 
