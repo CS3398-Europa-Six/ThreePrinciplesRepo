@@ -20,14 +20,18 @@ repositories {
 
 // In this section you declare the dependencies for your production and test code
 dependencies {
-    // The production code uses the SLF4J logging API at compile time
-    compile 'org.slf4j:slf4j-api:1.7.12'
-
-    // Declare the dependency for your favourite test framework you want to use in your tests.
-    // TestNG is also supported by the Gradle Test task. Just change the
-    // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
-    // 'test.useTestNG()' to your build script.
+    compile "joda-time:joda-time:2.2"
+    compile "org.junit.jupiter:junit-jupiter-api:4.10.0-M1"
     testCompile 'junit:junit:4.12'
+    testCompile "org.junit.jupiter:junit-jupiter-api:4.10.0-M1"
+
+    testImplementation(
+            'org.junit.jupiter:junit-jupiter-api:4.10.0-M1'
+    )
+    testRuntimeOnly(
+            'org.junit.jupiter:junit-jupiter-engine:4.10.0-M1',
+            'org.junit.vintage:junit-vintage-engine:4.10.0-M1'
+    )
 }
 */
 
@@ -82,20 +86,6 @@ targetCompatibility = 1.7
 
 // joda-time provides the time stamping used in HelloWorld.java
 // junit is to run the TestGreeter.java and others
-dependencies {
-    compile "joda-time:joda-time:2.2"
-    compile "org.junit.jupiter:junit-jupiter-api:4.10.0-M1"
-    testCompile 'junit:junit:4.12'
-    testCompile "org.junit.jupiter:junit-jupiter-api:4.10.0-M1"
-
-    testImplementation(
-            'org.junit.jupiter:junit-jupiter-api:4.10.0-M1'
-    )
-    testRuntimeOnly(
-            'org.junit.jupiter:junit-jupiter-engine:4.10.0-M1',
-            'org.junit.vintage:junit-vintage-engine:4.10.0-M1'
-    )
-}
 
 repositories {
 	mavenCentral()
