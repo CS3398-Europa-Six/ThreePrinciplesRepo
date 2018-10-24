@@ -82,12 +82,19 @@ targetCompatibility = 1.7
 
 // joda-time provides the time stamping used in HelloWorld.java
 // junit is to run the TestGreeter.java and others
-dependencies {       
-    testImplementation "org.junit.jupiter:junit-jupiter-params:$junitVersion"
-    testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+dependencies {
+    compile "joda-time:joda-time:2.2"
+    compile "org.junit.jupiter:junit-jupiter-api:4.10.0-M1"
+    testCompile 'junit:junit:4.12'
+    testCompile "org.junit.jupiter:junit-jupiter-api:4.10.0-M1"
 
-    testRuntimeOnly "org.junit.vintage:junit-vintage-engine:4.12.0"
-    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+    testImplementation(
+            'org.junit.jupiter:junit-jupiter-api:4.10.0-M1'
+    )
+    testRuntimeOnly(
+            'org.junit.jupiter:junit-jupiter-engine:4.10.0-M1',
+            'org.junit.vintage:junit-vintage-engine:4.10.0-M1'
+    )
 }
 
 repositories {
@@ -96,9 +103,7 @@ repositories {
 
 
 test {
-    useJUnitPlatform {
-        includeEngines 'junit-jupiter', 'junit-vintage'
-    }
+    useJUnitPlatform()
 }
 // end::dependencies[]
 
