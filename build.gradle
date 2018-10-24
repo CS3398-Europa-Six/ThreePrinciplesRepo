@@ -104,8 +104,8 @@ dependencies {
 }
 
 
-test {
-    useJUnitPlatform()
+junitPlatform {
+    details 'tree'
 }
 // end::dependencies[]
 
