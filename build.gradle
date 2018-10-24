@@ -103,7 +103,7 @@ repositories {
 
 
 test {
-    //useJUnitPlatform()
+    useJUnitPlatform()
 }
 // end::dependencies[]
 
