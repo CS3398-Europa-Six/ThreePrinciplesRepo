@@ -71,7 +71,7 @@ repositories {
 //
 //
 jar {
-    baseName = 'dl-three-solid-main'
+    baseName = 'threesolid'
     version =  '0.1.0'
 }
 // end::jar[]
