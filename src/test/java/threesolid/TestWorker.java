@@ -28,5 +28,28 @@ public class TestWorker {
       assertEquals(w.getName(),"Corvus Glaive");
       assertEquals(w.work(),"Corvus Glaive is working very hard!");
    }
+    
 
+    private Worker www;
+
+   @Test
+   @DisplayName("This test will pass because www is null")
+   public void newtestCLPWorkerPass()
+   {
+      boolean fl = true;
+      assertTrue(fl,"This bool is true, so won't fail here");
+      assertNull(www);
+   }
+
+    
+   private String time = "Money";
+    
+   @Test
+   @DisplayName("Fail test in worker")
+   public void newtestCLPWorkerFail()
+   {
+      assertNotEquals(time,"Money");
+   }
+    
+    
 }

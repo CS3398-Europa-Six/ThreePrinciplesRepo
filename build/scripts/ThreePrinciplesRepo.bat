@@ -1,7 +1,7 @@
 @if "%DEBUG%" == "" @echo off
 @rem ##########################################################################
 @rem
-@rem  ThreeSolidMain startup script for Windows
+@rem  ThreePrinciplesRepo startup script for Windows
 @rem
 @rem ##########################################################################
 
@@ -13,7 +13,7 @@ if "%DIRNAME%" == "" set DIRNAME=.
 set APP_BASE_NAME=%~n0
 set APP_HOME=%DIRNAME%..
 
-@rem Add default JVM options here. You can also use JAVA_OPTS and THREE_SOLID_MAIN_OPTS to pass JVM options to this script.
+@rem Add default JVM options here. You can also use JAVA_OPTS and THREE_PRINCIPLES_REPO_OPTS to pass JVM options to this script.
 set DEFAULT_JVM_OPTS=
 
 @rem Find java.exe
@@ -63,19 +63,19 @@ set CMD_LINE_ARGS=%*
 :execute
 @rem Setup the command line
 
-set CLASSPATH=%APP_HOME%\lib\dl-three-solid-main-0.1.0.jar;%APP_HOME%\lib\joda-time-2.2.jar;%APP_HOME%\lib\junit-jupiter-api-5.3.0-M1.jar;%APP_HOME%\lib\junit-platform-commons-1.3.0-M1.jar;%APP_HOME%\lib\apiguardian-api-1.0.0.jar;%APP_HOME%\lib\opentest4j-1.1.0.jar
+set CLASSPATH=%APP_HOME%\lib\dl-three-solid-main-0.1.0.jar;%APP_HOME%\lib\joda-time-2.2.jar;%APP_HOME%\lib\junit-jupiter-api-5.0.1.jar;%APP_HOME%\lib\opentest4j-1.0.0.jar;%APP_HOME%\lib\junit-platform-commons-1.0.1.jar
 
-@rem Execute ThreeSolidMain
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %THREE_SOLID_MAIN_OPTS%  -classpath "%CLASSPATH%" threesolid.ThreeSolidMain %CMD_LINE_ARGS%
+@rem Execute ThreePrinciplesRepo
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %THREE_PRINCIPLES_REPO_OPTS%  -classpath "%CLASSPATH%" threesolid.ThreePrinciplesRepo %CMD_LINE_ARGS%
 
 :end
 @rem End local scope for the variables with windows NT shell
 if "%ERRORLEVEL%"=="0" goto mainEnd
 
 :fail
-rem Set variable THREE_SOLID_MAIN_EXIT_CONSOLE if you need the _script_ return code instead of
+rem Set variable THREE_PRINCIPLES_REPO_EXIT_CONSOLE if you need the _script_ return code instead of
 rem the _cmd.exe /c_ return code!
-if  not "" == "%THREE_SOLID_MAIN_EXIT_CONSOLE%" exit 1
+if  not "" == "%THREE_PRINCIPLES_REPO_EXIT_CONSOLE%" exit 1
 exit /b 1
 
 :mainEnd
