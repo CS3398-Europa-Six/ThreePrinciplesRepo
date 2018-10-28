@@ -29,19 +29,4 @@ public class TestWorker {
       assertEquals(w.work(),"Corvus Glaive is working very hard!");
    }
 
-   @Test
-   @DisplayName("Testing set/get name")
-   public void testWorkerWithName()
-   {
-      w.setName("John Doe");
-      assertEquals(w.getName(),"Jane Doe");
-   }
-
-   @Test
-   @DisplayName("Testing worker object")
-   public void testWorkerWithName()
-   {
-      Worker worker = new Worker();
-      assertNotNull(worker);
-   }
 }
