@@ -30,16 +30,16 @@ public class TestWorker {
    }
 
    @Test
-   @DisplayName("Testing set/get name")
-   public void testWorkerWithName()
+   @DisplayName("newtest<tah>WorkerFail()")
+   public void testWorkersName()
    {
       w.setName("John Doe");
       assertEquals(w.getName(),"Jane Doe");
    }
 
    @Test
-   @DisplayName("Testing worker object")
-   public void testWorkerWithName()
+   @DisplayName("newtest<tah>WorkerPass()")
+   public void testWorkerObject()
    {
       Worker worker = new Worker();
       assertNotNull(worker);
