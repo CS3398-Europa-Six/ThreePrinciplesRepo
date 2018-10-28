@@ -13,20 +13,17 @@ public class TestWorker {
    private  Worker w = new Worker();
 	
    @Test
-   @DisplayName("No Name Test")
-   public void testWorkerWithNoName()
+   @DisplayName("Phil Test")
+   public void newtestPTWorkerPass()
    {
-      assertEquals(w.getName(),"");
       assertEquals(w.work(),"I'm working already!");
    }
 
    @Test
    @DisplayName("With Name Test")
-   public void testWorkerWithName()
+   public void newtestPTWorkerFail()
    {
-      w.setName("Corvus Glaive");
-      assertEquals(w.getName(),"Corvus Glaive");
-      assertEquals(w.work(),"Corvus Glaive is working very hard!");
-   }
+     assertEquals(w.work(),"Failed Test");
+    }
 
 }
