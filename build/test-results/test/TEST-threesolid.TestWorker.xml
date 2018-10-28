@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="threesolid.TestWorker" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-10-24T00:09:04" hostname="ChaseLP2" time="0.013">
+<testsuite name="threesolid.TestWorker" tests="4" skipped="0" failures="0" errors="0" timestamp="2018-10-28T02:07:04" hostname="Fernandos-MacBook-Pro.local" time="0.014">
   <properties/>
-  <testcase name="testWorkerWithName()" classname="threesolid.TestWorker" time="0.01"/>
+  <testcase name="testWorkerWithName()" classname="threesolid.TestWorker" time="0.008"/>
   <testcase name="testWorkerWithNoName()" classname="threesolid.TestWorker" time="0.001"/>
+  <testcase name="newtestFBWorkerFail()" classname="threesolid.TestWorker" time="0.001"/>
+  <testcase name="newtestFBWorkerPass()" classname="threesolid.TestWorker" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

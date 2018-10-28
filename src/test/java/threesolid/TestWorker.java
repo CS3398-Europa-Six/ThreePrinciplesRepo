@@ -29,4 +29,22 @@ public class TestWorker {
       assertEquals(w.work(),"Corvus Glaive is working very hard!");
    }
 
+   @Test
+   @DisplayName("Successful Not Null test")
+   public void newtestFBWorkerPass(){
+   		String fName = "Fernando";
+   		String lName = "Buenrostro";
+   		String fullName = fName + lName; //assign value of fullName
+         assertNotNull(fullName);	//fullName will pass as it is not null
+   }
+
+  @Test
+   @DisplayName("Unsuccessful Not Null test")
+   public void newtestFBWorkerPass(){
+   		String fName = null;
+         assertNotNull(fName);	//fName will not pass as it is null
+   }
+
+
+
 }
